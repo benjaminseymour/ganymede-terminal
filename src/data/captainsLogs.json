@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",        
+        "datetime": "2123-09-01 22:23:45.756",
+        "title": "A good day",
+        "detail": "Today, everything was good."
+    },        
+    {
+        "id": "2",        
+        "datetime": "2123-09-02 22:23:45.756",
+        "title": "A bad day",
+        "detail": "Today, everything was bad."
+    }
+]

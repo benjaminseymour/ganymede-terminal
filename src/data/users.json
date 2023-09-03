@@ -1,0 +1,300 @@
+[
+    {
+        "name": "Captain Crunch",
+        "id": "12345",
+        "grants": [
+            "captains-log:read"
+        ]
+    },
+    {
+        "name": "Chief Engineer Kira Ravenna",
+        "id": "UE546R786",
+        "grants": [
+            "access-log:read",
+            "ship-diagnostics:read"
+        ]
+    },   
+    {
+        "name": "Chief Medical Officer Alexander Blackwell",
+        "id": "UE354C546",
+        "grants": [
+            "medical-record:read"
+        ]
+    },
+    {
+        "name": "Aeryn Patel",
+        "id": "UE901B379",
+        "medical": {
+            "bloodType": "B Positive",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
+            "bodyScanResults": "Fracture calluses on occipital, L parietal, L zygomatic, scapula, sternum.",
+            "medicalOfficersNotes": "Signs of significant trauma, healing indicates at least 2 years ago."
+        }
+    },
+    {
+        "name": "Arlo Jackson",
+        "id": "MC492L214",
+        "medical": {
+            "bloodType": "O Positive",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
+            "bodyScanResults": "Fracture calluses on R humerus, R scapula.",
+            "medicalOfficersNotes": "Healing consistent with timing of known shuttle crash injury."
+        }
+    },
+    {
+        "name": "Axel McCarthy",
+        "id": "MC687S809",
+        "medical": {
+            "bloodType": "A Positive",
+            "geneticRiskMarkers": "PALB2, ATM indicative of increased cancer risk.",
+            "bodyScanResults": "Fracture calluses on occipital, L & R parietal, L & R zygomatic, R humerus, L scapula, ribs, R ulna, L femur, L patella, L Tibia.",
+            "medicalOfficersNotes": "Multiple signs of prior injuries, consistent with expectations due to profession."
+        }
+    },
+    {
+        "name": "B.E.T.A.",
+        "id": "B.E.T.A.",
+        "medical": {
+            "bloodType": "Not Applicable",
+            "geneticRiskMarkers": "Not Applicable.",
+            "bodyScanResults": "Mechanical skeleton with CPU, covered by laboratory grown flesh and skin.",
+            "medicalOfficersNotes": "Scans consistent with accepted AI robotic protocols."
+        }
+    },
+    {
+        "name": "Calyx Omega",
+        "id": "MC614H740",
+        "medical": {
+            "bloodType": "A Negative",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
+            "medicalOfficersNotes": "Blood typing inconsistent with medical records."
+        }
+    },
+    {
+        "name": "Charlie Stacker",
+        "id": "MC697I108",
+        "medical": {
+            "bloodType": "O Positive",
+            "geneticRiskMarkers": "HLA-DR4 indicative of increased diabetes risk.",
+            "bodyScanResults": "Fracture calluses on sternum, ribs, R ulna, r radius.",
+            "medicalOfficersNotes": "Signs of recent significant trauma."
+        }
+    },
+    {
+        "name": "Dash Jackson-Gates",
+        "id": "MC727D555",
+        "medical": {
+            "bloodType": "O Positive",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.  DNA abnomality DIP2C, SLC25A19."
+        }
+    },
+    {
+        "name": "Delaney Xue",
+        "id": "UE910V001",
+        "medical": {
+            "bloodType": "B Negative",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
+            "bodyScanResults": "Cybernetic brain.",
+            "medicalOfficersNotes": "**REDACTED**"
+        }
+    },
+    {
+        "name": "Delta Nadir",
+        "id": "MC390G662",
+        "medical": {
+            "bloodType": "Error",
+            "geneticRiskMarkers": "Unknown DNA profile.",
+            "medicalOfficersNotes": "DNA profile is incompatible with human origin. Further study required."
+        }
+    },
+    {
+        "name": "Deveraux Calderon",
+        "id": "UE740T568",
+        "medical": {
+            "bloodType": "O Negative",
+            "geneticRiskMarkers": "6p21.2 LINC00951-LRFN2 gene consistent with ASPD.",
+            "medicalOfficersNotes": "Genetic profile suggests passenger at risk of anti social personality disorder. Passenger shares genetic profile with UE740S146 indicitive of close familiar relationship."
+        }
+    },
+    {
+        "name": "Fable Calderon",
+        "id": "UE751A084",
+        "medical": {
+            "bloodType": "A Positive",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        }
+    },
+    {
+        "name": "Foxx Sharpe",
+        "id": "MC590J349",
+        "medical": {
+            "bloodType": "B Positive",
+            "geneticRiskMarkers": "PALB2 indicative of increased cancer risk.",
+            "bodyScanResults": "Fracture calluses on L clavicle, L humerus.",
+            "medicalOfficersNotes": "Signs of significant trauma, healing indicates trauma before passenger had reached maturity."
+        }
+    },
+    {
+        "name": "Harding Moss",
+        "id": "UE899C525",
+        "medical": {
+            "bloodType": "B Negative",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        }
+    },
+    {
+        "name": "Haze Varling",
+        "id": "UE608D857",
+        "medical": {
+            "bloodType": "O Positive",
+            "geneticRiskMarkers": "HNF1A, HNF1B and HNF4A indicative of increased diabetes risk.",
+            "bodyScanResults": "Fracture calluses on occipital, L & R zygomatic, L & R humerus, L scapula, ribs, R ulna, L femur, R patella, L Tibia.",
+            "medicalOfficersNotes": "Multiple signs of prior injuries inconsistent with stated medical history and profession."
+        }
+    },
+    {
+        "name": "Jett Wesbayo",
+        "id": "UE541F024",
+        "medical": {
+            "bloodType": "Not Applicable",
+            "geneticRiskMarkers": "Not Applicable.",
+            "bodyScanResults": "Mechanical skeleton with CPU, covered by laboratory grown flesh and skin.",
+            "medicalOfficersNotes": "Scans consistent with accepted AI robotic protocols. Please confirm if this passenger is a registered AI?"
+        }
+    },
+    {
+        "name": "Kai",
+        "id": "MC710A172",
+        "medical": {
+            "bloodType": "O Positive",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        }
+    },
+    {
+        "name": "Kiko Cappiello",
+        "id": "UE991F473",
+        "medical": {
+            "bloodType": "B Negative",
+            "geneticRiskMarkers": "DNA abnomality DIP2C, SLC25A19.",
+            "bodyScanResults": "Minor fracture calluses on L zygomatic.",
+            "medicalOfficersNotes": "Minor trauma consistent with passenger having received a blow to the face. Genetic profile suggests non EUC origin."
+        }
+    },
+    {
+        "name": "Korvo Quill",
+        "id": "UE940Q490",
+        "medical": {
+            "bloodType": "O Positive",
+            "geneticRiskMarkers": "EPCAM indicative of increased cancer risk.",
+            "bodyScanResults": "Fracture calluses on R ulna, L radius, R clavicle, L femur, ribs, R tibia.",
+            "medicalOfficersNotes": "Multiple signs of prior injuries, consistent with expectations due to profession."
+        }
+    },
+    {
+        "name": "Lex Cappiello",
+        "id": "UE740S146",
+        "medical": {
+            "bloodType": "O Negative",
+            "geneticRiskMarkers": "6p21.2 LINC00951-LRFN2 gene consistent with ASPD.",
+            "bodyScanResults": "Unknown biological entity attached to cerebrum.",
+            "medicalOfficersNotes": "Genetic profile suggests passenger at risk of anti social personality disorder. Passenger shares genetic profile with UE740T568 indicitive of close familiar relationship. Genetic sample of unknown biological entity not yet acquired. Recommendation that this is obtained with urgency."
+        }
+    },
+    {
+        "name": "Lotus Pérez",
+        "id": "MC214A984",
+        "medical": {
+            "bloodType": "Error",
+            "geneticRiskMarkers": "Unknown DNA profile."
+        }
+    },
+    {
+        "name": "Marin Adinov",
+        "id": "MC528Y766",
+        "medical": {
+            "bloodType": "A Negative",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        }
+    },
+    {
+        "name": "Ocean Lahiri",
+        "id": "UE840E185",
+        "medical": {
+            "bloodType": "A Positive",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        }
+    },
+    {
+        "name": "Rigel Mirzza",
+        "id": "UE778I545",
+        "medical": {
+            "bloodType": "A Negative",
+            "geneticRiskMarkers": "HNF1A, HNF1B and HNF4A indicative of increased diabetes risk. MTPAP and MYBPHL positive.",
+            "bodyScanResults": "Fracture calluses on occipital, R parietal, R temporal, L & R maxillae, hyoid, vomer.",
+            "medicalOfficersNotes": "Signs of recent significant trauma unrelated to the testing. Subject will need to be monitored to see if this will have any impact on further experimentation."
+        }
+    },
+    {
+        "name": "Rue Bariazzo",
+        "id": "UE924L816",
+        "medical": {
+            "bloodType": "O Positive",
+            "geneticRiskMarkers": "PALB2 indicative of increased cancer risk."
+        }
+    },
+    {
+        "name": "Sevyn Mpez",
+        "id": "UE791Z204",
+        "medical": {
+            "bloodType": "A Negative",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        }
+    },
+    {
+        "name": "Solstice Sa'ud",
+        "id": "UE895T213",
+        "medical": {
+            "bloodType": "A Negative",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
+            "bodyScanResults": "Unknown biological entity attached to cerebrum.",
+            "medicalOfficersNotes": "Genetic sample of unknown biological entity not yet acquired. Recommendation that this is obtained with urgency."
+        }
+    },
+    {
+        "name": "Teagan Gates",
+        "id": "MC514G899",
+        "medical": {
+            "bloodType": "O Negative",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.  DNA abnomality DIP2C, SLC25A19."
+        }
+    },
+    {
+        "name": "Xian O'nor",
+        "id": "UE836L999",
+        "medical": {
+            "bloodType": "A Positive",
+            "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
+            "bodyScanResults": "Cybernetic brain implant."
+        }
+    },
+    {
+        "name": "Zephyr Burlyle-Soss",
+        "id": "UE802H612",
+        "medical": {
+            "bloodType": "Not Available",
+            "geneticRiskMarkers": "Not Available.",
+            "bodyScanResults": "Not Available.",
+            "medicalOfficersNotes": "Not Available."
+        }
+    },
+    {
+        "name": "Ziggy Mansanya",
+        "id": "MC487P226",
+        "medical": {
+            "bloodType": "O Positive",
+            "geneticRiskMarkers": "PALB2 indicative of increased cancer risk.",
+            "bodyScanResults": "Fracture calluses on sternum, ribs, R ulna, r radius.",
+            "medicalOfficersNotes": "Signs of recent significant trauma."
+        }
+    }
+]
