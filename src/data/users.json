@@ -29,6 +29,11 @@
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
             "bodyScanResults": "Fracture calluses on occipital, L parietal, L zygomatic, scapula, sternum.",
             "medicalOfficersNotes": "Signs of significant trauma, healing indicates at least 2 years ago."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "VIP - employee of UEC Chair"
         }
     },
     {
@@ -39,6 +44,11 @@
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
             "bodyScanResults": "Fracture calluses on R humerus, R scapula.",
             "medicalOfficersNotes": "Healing consistent with timing of known shuttle crash injury."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "VIP - child of Governor of Mars Colony."
         }
     },
     {
@@ -49,6 +59,11 @@
             "geneticRiskMarkers": "PALB2, ATM indicative of increased cancer risk.",
             "bodyScanResults": "Fracture calluses on occipital, L & R parietal, L & R zygomatic, R humerus, L scapula, ribs, R ulna, L femur, L patella, L Tibia.",
             "medicalOfficersNotes": "Multiple signs of prior injuries, consistent with expectations due to profession."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "**REDACTED**"
         }
     },
     {
@@ -59,6 +74,11 @@
             "geneticRiskMarkers": "Not Applicable.",
             "bodyScanResults": "Mechanical skeleton with CPU, covered by laboratory grown flesh and skin.",
             "medicalOfficersNotes": "Scans consistent with accepted AI robotic protocols."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "AI - Ensure SIRLIE runs full diagnostic scan during stasis shutdown."
         }
     },
     {
@@ -67,7 +87,12 @@
         "medical": {
             "bloodType": "A Negative",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
-            "medicalOfficersNotes": "Blood typing inconsistent with medical records."
+            "medicalOfficersNotes": "Blood typing inconsistent with medical records. Passenger shares genetic profile with UE895T213 indicative of close familiar relationship."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Investigate genetic irregularity."
         }
     },
     {
@@ -78,6 +103,11 @@
             "geneticRiskMarkers": "HLA-DR4 indicative of increased diabetes risk.",
             "bodyScanResults": "Fracture calluses on sternum, ribs, R ulna, r radius.",
             "medicalOfficersNotes": "Signs of recent significant trauma."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo approved",
+            "captainsNotes": "Fee paid by UEC"
         }
     },
     {
@@ -86,6 +116,11 @@
         "medical": {
             "bloodType": "O Positive",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.  DNA abnomality DIP2C, SLC25A19."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "VIP - Gates AND Jackson families. Attempted to hack SIRLIE - blocked."
         }
     },
     {
@@ -96,6 +131,11 @@
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
             "bodyScanResults": "Cybernetic brain.",
             "medicalOfficersNotes": "**REDACTED**"
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "**REDACTED**",
+            "captainsNotes": "**REDACTED**"
         }
     },
     {
@@ -105,6 +145,11 @@
             "bloodType": "Error",
             "geneticRiskMarkers": "Unknown DNA profile.",
             "medicalOfficersNotes": "DNA profile is incompatible with human origin. Further study required."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Blackwell to investigate further."
         }
     },
     {
@@ -114,6 +159,11 @@
             "bloodType": "O Negative",
             "geneticRiskMarkers": "6p21.2 LINC00951-LRFN2 gene consistent with ASPD.",
             "medicalOfficersNotes": "Genetic profile suggests passenger at risk of anti social personality disorder. Passenger shares genetic profile with UE740S146 indicitive of close familiar relationship."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "VIP - Owner of RRMC - Discount?"
         }
     },
     {
@@ -122,6 +172,11 @@
         "medical": {
             "bloodType": "A Positive",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed. Carrying illuminite on person",
+            "captainsNotes": "VIP - 5th richest person in galaxy."
         }
     },
     {
@@ -132,6 +187,11 @@
             "geneticRiskMarkers": "PALB2 indicative of increased cancer risk.",
             "bodyScanResults": "Fracture calluses on L clavicle, L humerus.",
             "medicalOfficersNotes": "Signs of significant trauma, healing indicates trauma before passenger had reached maturity."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Frequent flier, UEC - MC"
         }
     },
     {
@@ -140,6 +200,11 @@
         "medical": {
             "bloodType": "B Negative",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "VIP - grandchild of UEC Chair."
         }
     },
     {
@@ -150,6 +215,11 @@
             "geneticRiskMarkers": "HNF1A, HNF1B and HNF4A indicative of increased diabetes risk.",
             "bodyScanResults": "Fracture calluses on occipital, L & R zygomatic, L & R humerus, L scapula, ribs, R ulna, L femur, R patella, L Tibia.",
             "medicalOfficersNotes": "Multiple signs of prior injuries inconsistent with stated medical history and profession."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Frequent flier, UEC - MC - GC"
         }
     },
     {
@@ -160,6 +230,11 @@
             "geneticRiskMarkers": "Not Applicable.",
             "bodyScanResults": "Mechanical skeleton with CPU, covered by laboratory grown flesh and skin.",
             "medicalOfficersNotes": "Scans consistent with accepted AI robotic protocols. Please confirm if this passenger is a registered AI?"
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Additional discretion fee paid by UE751A084. SIRLIE to run full scan."
         }
     },
     {
@@ -168,6 +243,11 @@
         "medical": {
             "bloodType": "O Positive",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Famous influencer - Marketing has flagged as potential for collab. "
         }
     },
     {
@@ -178,6 +258,11 @@
             "geneticRiskMarkers": "DNA abnomality DIP2C, SLC25A19.",
             "bodyScanResults": "Minor fracture calluses on L zygomatic.",
             "medicalOfficersNotes": "Minor trauma consistent with passenger having received a blow to the face. Genetic profile suggests non EUC origin."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Illegal non UEC citizen. Additional discretion fee paid by UE740S146"
         }
     },
     {
@@ -188,6 +273,11 @@
             "geneticRiskMarkers": "EPCAM indicative of increased cancer risk.",
             "bodyScanResults": "Fracture calluses on R ulna, L radius, R clavicle, L femur, ribs, R tibia.",
             "medicalOfficersNotes": "Multiple signs of prior injuries, consistent with expectations due to profession."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Undeclared weapon in cargo. Fee paid.",
+            "captainsNotes": "Additional discretion fee paid by UE740S146"
         }
     },
     {
@@ -198,6 +288,11 @@
             "geneticRiskMarkers": "6p21.2 LINC00951-LRFN2 gene consistent with ASPD.",
             "bodyScanResults": "Unknown biological entity attached to cerebrum.",
             "medicalOfficersNotes": "Genetic profile suggests passenger at risk of anti social personality disorder. Passenger shares genetic profile with UE740T568 indicitive of close familiar relationship. Genetic sample of unknown biological entity not yet acquired. Recommendation that this is obtained with urgency."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed. Carrying illuminite on person",
+            "captainsNotes": "VIP - Mobster. Be cautious, known to be volatile. "
         }
     },
     {
@@ -206,6 +301,11 @@
         "medical": {
             "bloodType": "Error",
             "geneticRiskMarkers": "Unknown DNA profile."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Blackwell to investigate further."
         }
     },
     {
@@ -214,6 +314,11 @@
         "medical": {
             "bloodType": "A Negative",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Irregularity with cargo, indicative of alternate reason for travel. Check with CoC confirmed legitimacy of identification."
         }
     },
     {
@@ -222,6 +327,11 @@
         "medical": {
             "bloodType": "A Positive",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Lahiri family are famed cosmetic surgeons - limited opportunities on Ganymede for cosmetics?"
         }
     },
     {
@@ -232,6 +342,11 @@
             "geneticRiskMarkers": "HNF1A, HNF1B and HNF4A indicative of increased diabetes risk. MTPAP and MYBPHL positive.",
             "bodyScanResults": "Fracture calluses on occipital, R parietal, R temporal, L & R maxillae, hyoid, vomer.",
             "medicalOfficersNotes": "Signs of recent significant trauma unrelated to the testing. Subject will need to be monitored to see if this will have any impact on further experimentation."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Expertimentation continues. Subject still unaware."
         }
     },
     {
@@ -240,6 +355,11 @@
         "medical": {
             "bloodType": "O Positive",
             "geneticRiskMarkers": "PALB2 indicative of increased cancer risk."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Large store of illuminite in cargo. Fee paid. Carrying illuminite on person.",
+            "captainsNotes": "**REDACTED**"
         }
     },
     {
@@ -248,6 +368,11 @@
         "medical": {
             "bloodType": "A Negative",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "Genetic scan matches previous passenger UE862W092. Investigation into ID shows no irregularity - get the name of their guy"
         }
     },
     {
@@ -257,7 +382,12 @@
             "bloodType": "A Negative",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
             "bodyScanResults": "Unknown biological entity attached to cerebrum.",
-            "medicalOfficersNotes": "Genetic sample of unknown biological entity not yet acquired. Recommendation that this is obtained with urgency."
+            "medicalOfficersNotes": "Genetic sample of unknown biological entity not yet acquired. Recommendation that this is obtained with urgency. Passenger shares genetic profile with MC614H740 indicative of close familiar relationship."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "VIP - member of Saudi royalty."
         }
     },
     {
@@ -266,6 +396,11 @@
         "medical": {
             "bloodType": "O Negative",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.  DNA abnomality DIP2C, SLC25A19."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed",
+            "captainsNotes": "VIP - member of Gates family."
         }
     },
     {
@@ -275,6 +410,11 @@
             "bloodType": "A Positive",
             "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes.",
             "bodyScanResults": "Cybernetic brain implant."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Unusual item in cargo. Fee paid.",
+            "captainsNotes": "Frequent Flier, UEC - MC - GC"
         }
     },
     {
@@ -285,6 +425,11 @@
             "geneticRiskMarkers": "Not Available.",
             "bodyScanResults": "Not Available.",
             "medicalOfficersNotes": "Not Available."
+        },
+        "manifest": {
+            "embarked": "UEC",
+            "cargo": "Immune from cargo scan.",
+            "captainsNotes": "VIP - Owner of Pioneer Pathways. No surveillance permitted."
         }
     },
     {
@@ -295,6 +440,11 @@
             "geneticRiskMarkers": "PALB2 indicative of increased cancer risk.",
             "bodyScanResults": "Fracture calluses on sternum, ribs, R ulna, r radius.",
             "medicalOfficersNotes": "Signs of recent significant trauma."
+        },
+        "manifest": {
+            "embarked": "Mars Colony",
+            "cargo": "Cargo scan passed. Carrying illuminite on person",
+            "captainsNotes": "Flagged as potential smuggler. Cargo scan was clean however. Further investigation required."
         }
     }
 ]

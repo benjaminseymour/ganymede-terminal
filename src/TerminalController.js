@@ -157,15 +157,6 @@ const TerminalController = () => {
     }
   };
 
-  const shipDiagnostics = () => {
-    if (!checkGrant("ship-diagnostics:read")) {
-      addAccessLog(`Unauthorised access to ship diagnostics denied.`)
-      printUnauthorised();
-    } else {
-      // TODO
-    }
-  }
-
   const accessLog = () => {
     if (!checkGrant("access-log:read")) {
       addAccessLog(`Unauthorised access to access logs denied.`)
@@ -176,12 +167,27 @@ const TerminalController = () => {
     }
   }
 
-  const shipManifest = () => {
+  const shipManifest = (userId) => {
     if (!checkGrant("ship-manifest:read")) {
       addAccessLog(`Unauthorised access to ship manifest denied.`)
       printUnauthorised();
-    } else {
-      // TODO
+    } else {      
+      const user = findUser(userId);
+
+      if (user !== null) {        
+        const manifest = user.manifest 
+
+        if (manifest !== undefined) {          
+          printOutput(`Manifest records for ${user.name}`);       
+          addAccessLog(`User ${userLoggedIn.name} accessed manifest records for ${user.name}.`)
+          if (manifest.embarked !== undefined) { printOutput(`Embarked: ${manifest.embarked}`); }
+          if (manifest.cargo !== undefined) { printOutput(`Cargo: ${manifest.cargo}`); }
+          if (manifest.captainsNotes !== undefined) { printOutput(`Captain's Notes: ${manifest.captainsNotes}`); }
+        } else {     
+          addAccessLog(`User ${userLoggedIn.name} attempted to access manifest records for ${user.name}.`)     
+          printOutput(`No manifest records available for ${user.name}.`);
+        }
+      }
     }
   }  
 
@@ -196,28 +202,17 @@ const TerminalController = () => {
         const medical = user.medical 
 
         if (medical !== undefined) {          
-          printOutput(`Medical records for ${user.name}`);
-          if (medical.bloodType !== undefined) {            
-            addAccessLog(`User ${userLoggedIn.name} accessed medical records for ${user.name}.`)
-            printOutput(`Blood type: ${medical.bloodType}`);
-            printOutput(`Genetic risk markers: ${medical.geneticRiskMarkers}`);
-            printOutput(`Body scan results: ${medical.bodyScanResults}`);
-            printOutput(`Medical officer's notes: ${medical.medicalOfficersNotes}`);
-          }
+          printOutput(`Medical records for ${user.name}`);          
+          addAccessLog(`User ${userLoggedIn.name} accessed medical records for ${user.name}.`)
+          if (medical.bloodType !== undefined) { printOutput(`Blood type: ${medical.bloodType}`); }
+          if (medical.geneticRiskMarkers !== undefined) { printOutput(`Genetic risk markers: ${medical.geneticRiskMarkers}`); }
+          if (medical.bodyScanResults !== undefined) { printOutput(`Body scan results: ${medical.bodyScanResults}`); }
+          if (medical.medicalOfficersNotes !== undefined) { printOutput(`Medical officer's notes: ${medical.medicalOfficersNotes}`); }
         } else {     
           addAccessLog(`User ${userLoggedIn.name} attempted to access medical records for ${user.name}.`)     
           printOutput(`No medical records available for ${user.name}.`);
         }
       }
-    }
-  }
-
-  const personnelRecord = () => {
-    if (!checkGrant("personnel-record:read")) {      
-      addAccessLog(`Unauthorised access to personnel records denied.`)
-      printUnauthorised();
-    } else {
-      // TODO
     }
   }
 
@@ -228,22 +223,16 @@ const TerminalController = () => {
     const command = tokens[0]?.toLocaleLowerCase();
     const parameter = tokens[1]?.toLocaleUpperCase();;
 
-    if (command === "clear") {
-      clear();
-    } else if (command === "login") {
+    if (command === "login") {
       login(parameter);
     } else if (command === "logout") {
       logout();
-    } else if (command === "ship-diagnostics") {
-      shipDiagnostics();
     } else if (command === "access-log") {
       accessLog();
     } else if (command === "ship-manifest") {
-      shipManifest();
+      shipManifest(parameter);
     } else if (command === "medical-record") {
       medicalRecord(parameter);
-    } else if (command === "personnel-record") {
-      personnelRecord();
     } else if (command === "captains-log") {
       captainsLog(parameter);      
     } else if (command === "") {
@@ -252,13 +241,17 @@ const TerminalController = () => {
     }
 
     updateUi();
+
+    if (command === "clear") {
+      clear();
+    }
   };
 
   return (
     <div className="container">
       <Terminal
         name="Starship Icarus Emergency Terminal"
-        height="93mxc vvh"
+        height="100vh"
         colorMode={ColorMode.Dark}
         onInput={onInput}
       >
