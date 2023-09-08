@@ -1,24 +1,30 @@
 [
     {
-        "name": "Captain Crunch",
-        "id": "12345",
+        "name": "Captain Edward Clooney",
+        "id": "UE445N376",
         "grants": [
             "captains-log:read"
         ]
     },
     {
         "name": "Chief Engineer Kira Ravenna",
-        "id": "UE546R786",
+        "id": "UE568T367",
         "grants": [
-            "access-log:read",
-            "ship-diagnostics:read"
+            "access-log:read"
         ]
     },   
     {
         "name": "Chief Medical Officer Alexander Blackwell",
-        "id": "UE354C546",
+        "id": "UE567G841",
         "grants": [
             "medical-record:read"
+        ]
+    }, 
+    {
+        "name": "Head of Human Resources Andreas Blackwell",
+        "id": "UE567W5563",
+        "grants": [
+            "ship-manifest:read"
         ]
     },
     {
@@ -420,6 +426,9 @@
     {
         "name": "Zephyr Burlyle-Soss",
         "id": "UE802H612",
+        "grants": [
+            "ship-manifest:read"
+        ],
         "medical": {
             "bloodType": "Not Available",
             "geneticRiskMarkers": "Not Available.",
