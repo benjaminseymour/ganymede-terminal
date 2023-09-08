@@ -1,3 +1,5 @@
+import './TerminalController.css';
+
 import React, { useState } from "react";
 import Terminal, {
   ColorMode,
@@ -130,7 +132,7 @@ const TerminalController = () => {
     } else if (logId === undefined) {
       captainsLogList();
     } else {
-      captainsLogDetail();
+      captainsLogDetail(logId);
     }
   };
 
@@ -146,13 +148,13 @@ const TerminalController = () => {
   const captainsLogDetail = (logId) => {
     const log = captainsLogs.find((log) => log.id === logId);
 
-    if (log === null) {      
+    if (log === undefined) {      
       addAccessLog(`User ${userLoggedIn.name} attempted to access captain's log detail id ${logId}.`)
       printOutput(`Captain's log with Id '${logId}' not found.`);
     } else {      
       addAccessLog(`User ${userLoggedIn.name} accessed captain's log detail id ${logId}.`)
-      printOutput(log.datetime);
-      printOutput(log.title);
+      printOutput(`${log.datetime} - ${log.title}`);
+      printOutput("");
       printOutput(log.detail);
     }
   };
@@ -252,6 +254,7 @@ const TerminalController = () => {
       <Terminal
         name="Starship Icarus Emergency Terminal"
         height="100vh"
+        width="100vw;"
         colorMode={ColorMode.Dark}
         onInput={onInput}
       >
