@@ -1,4 +1,4 @@
-import './TerminalController.css';
+import "./TerminalController.css";
 
 import React, { useState } from "react";
 import Terminal, {
@@ -9,6 +9,7 @@ import Terminal, {
 
 import users from "./data/users.json";
 import captainsLogs from "./data/captainsLogs.json";
+import simulations from "./data/simulations.json";
 
 const defaultTerminalOutput = [
   <TerminalOutput>
@@ -31,7 +32,7 @@ const TerminalController = () => {
     defaultTerminalOutput
   );
   const [userLoggedIn, setUserLoggedIn] = useState(null);
-  
+
   const [accessLogData, setAccessLogData] = useState([]);
 
   const outputBuffer = [];
@@ -58,20 +59,26 @@ const TerminalController = () => {
   };
 
   const printOutput = (text) => {
-    outputBuffer.push(<TerminalOutput>{text}</TerminalOutput>);
+    outputBuffer.push(<TerminalInput>{wrap(text, 100)}</TerminalInput>);
   };
+
+  const wrap = (s, w) =>
+    s.replace(
+      new RegExp(`(?![^\\n]{1,${w}}$)([^\\n]{1,${w}})\\s`, "g"),
+      "$1\n"
+    );
 
   const addAccessLog = (text) => {
     var date = new Date();
     var newDate = new Date(date.setFullYear(date.getFullYear() + 100));
     accessLogBuffer.push(`${newDate.toISOString()} - ${text}`);
-  }
+  };
 
   const updateUi = () => {
     const lineData = [...terminalLineData];
     outputBuffer.forEach((line) => lineData.push(line));
     setTerminalLineData(lineData);
-    
+
     const accessData = [...accessLogData];
     accessLogBuffer.forEach((line) => accessData.push(line));
     setAccessLogData(accessData);
@@ -99,7 +106,27 @@ const TerminalController = () => {
     }
 
     return user;
-  }
+  };
+
+  const findSimulation = (simulationId) => {
+    if (simulationId === undefined) {
+      printOutput("A valid simulation must be provided.");
+      return null;
+    }
+
+    console.log(simulations);
+
+    const simulation = simulations.find(
+      (simulation) => simulation.number === simulationId
+    );
+
+    if (simulation === undefined) {
+      printOutput(`Unable to find a valid simulation '${simulationId}'.`);
+      return null;
+    }
+
+    return simulation;
+  };
 
   const login = (userId) => {
     const user = findUser(userId);
@@ -107,27 +134,27 @@ const TerminalController = () => {
     if (user !== null) {
       setUserLoggedIn(user);
       printOutput(`Successfully logged in! Welcome ${user.name}!`);
-      addAccessLog(`${user.name} successfully logged in.`)
+      addAccessLog(`${user.name} successfully logged in.`);
     } else {
-      addAccessLog(`Failed login attempt with User Id ${userId}.`)
+      addAccessLog(`Failed login attempt with User Id ${userId}.`);
     }
   };
 
   const logout = () => {
     if (userLoggedIn === null) {
       printOutput("No user currently logged in!");
-      addAccessLog(`Failed logout attempt.`)
-    } else {      
-      addAccessLog(`${userLoggedIn.name} successfully logged out.`)
+      addAccessLog(`Failed logout attempt.`);
+    } else {
+      addAccessLog(`${userLoggedIn.name} successfully logged out.`);
       printOutput("Logging out...");
       setUserLoggedIn(null);
-      printOutput("Successfully logged out!");      
+      printOutput("Successfully logged out!");
     }
   };
 
   const captainsLog = (logId) => {
     if (!checkGrant("captains-log:read")) {
-      addAccessLog(`Unauthorised access to captain's log denied.`)
+      addAccessLog(`Unauthorised access to captain's log denied.`);
       printUnauthorised();
     } else if (logId === undefined) {
       captainsLogList();
@@ -136,23 +163,27 @@ const TerminalController = () => {
     }
   };
 
-  const captainsLogList = () => {    
-    addAccessLog(`User ${userLoggedIn.name} accessed captain's log list.`)
+  const captainsLogList = () => {
+    addAccessLog(`User ${userLoggedIn.name} accessed captain's log list.`);
     captainsLogs.forEach((log) => {
       printOutput(
         `Id: ${log.id}, DateTime: ${log.datetime}, Title: ${log.title}`
       );
     });
-  };  
+  };
 
   const captainsLogDetail = (logId) => {
     const log = captainsLogs.find((log) => log.id === logId);
 
-    if (log === undefined) {      
-      addAccessLog(`User ${userLoggedIn.name} attempted to access captain's log detail id ${logId}.`)
+    if (log === undefined) {
+      addAccessLog(
+        `User ${userLoggedIn.name} attempted to access captain's log detail id ${logId}.`
+      );
       printOutput(`Captain's log with Id '${logId}' not found.`);
-    } else {      
-      addAccessLog(`User ${userLoggedIn.name} accessed captain's log detail id ${logId}.`)
+    } else {
+      addAccessLog(
+        `User ${userLoggedIn.name} accessed captain's log detail id ${logId}.`
+      );
       printOutput(`${log.datetime} - ${log.title}`);
       printOutput("");
       printOutput(log.detail);
@@ -161,69 +192,114 @@ const TerminalController = () => {
 
   const accessLog = () => {
     if (!checkGrant("access-log:read")) {
-      addAccessLog(`Unauthorised access to access logs denied.`)
+      addAccessLog(`Unauthorised access to access logs denied.`);
       printUnauthorised();
-    } else {      
-      addAccessLog(`User ${userLoggedIn.name} accessed access logs.`)
-      accessLogData.forEach(log => printOutput(log))
+    } else {
+      addAccessLog(`User ${userLoggedIn.name} accessed access logs.`);
+      accessLogData.forEach((log) => printOutput(log));
     }
-  }
+  };
 
   const shipManifest = (userId) => {
     if (!checkGrant("ship-manifest:read")) {
-      addAccessLog(`Unauthorised access to ship manifest denied.`)
-      printUnauthorised();
-    } else {      
-      const user = findUser(userId);
-
-      if (user !== null) {        
-        const manifest = user.manifest 
-
-        if (manifest !== undefined) {          
-          printOutput(`Manifest records for ${user.name}`);       
-          addAccessLog(`User ${userLoggedIn.name} accessed manifest records for ${user.name}.`)
-          if (manifest.embarked !== undefined) { printOutput(`Embarked: ${manifest.embarked}`); }
-          if (manifest.cargo !== undefined) { printOutput(`Cargo: ${manifest.cargo}`); }
-          if (manifest.captainsNotes !== undefined) { printOutput(`Captain's Notes: ${manifest.captainsNotes}`); }
-        } else {     
-          addAccessLog(`User ${userLoggedIn.name} attempted to access manifest records for ${user.name}.`)     
-          printOutput(`No manifest records available for ${user.name}.`);
-        }
-      }
-    }
-  }  
-
-  const medicalRecord = (userId) => {
-    if (!checkGrant("medical-record:read")) {
-      addAccessLog(`Unauthorised access to medical records denied.`)
+      addAccessLog(`Unauthorised access to ship manifest denied.`);
       printUnauthorised();
     } else {
       const user = findUser(userId);
 
-      if (user !== null) {        
-        const medical = user.medical 
+      if (user !== null) {
+        const manifest = user.manifest;
 
-        if (medical !== undefined) {          
-          printOutput(`Medical records for ${user.name}`);          
-          addAccessLog(`User ${userLoggedIn.name} accessed medical records for ${user.name}.`)
-          if (medical.bloodType !== undefined) { printOutput(`Blood type: ${medical.bloodType}`); }
-          if (medical.geneticRiskMarkers !== undefined) { printOutput(`Genetic risk markers: ${medical.geneticRiskMarkers}`); }
-          if (medical.bodyScanResults !== undefined) { printOutput(`Body scan results: ${medical.bodyScanResults}`); }
-          if (medical.medicalOfficersNotes !== undefined) { printOutput(`Medical officer's notes: ${medical.medicalOfficersNotes}`); }
-        } else {     
-          addAccessLog(`User ${userLoggedIn.name} attempted to access medical records for ${user.name}.`)     
+        if (manifest !== undefined) {
+          printOutput(`Manifest records for ${user.name}`);
+          addAccessLog(
+            `User ${userLoggedIn.name} accessed manifest records for ${user.name}.`
+          );
+          if (manifest.embarked !== undefined) {
+            printOutput(`Embarked: ${manifest.embarked}`);
+          }
+          if (manifest.cargo !== undefined) {
+            printOutput(`Cargo: ${manifest.cargo}`);
+          }
+          if (manifest.captainsNotes !== undefined) {
+            printOutput(`Captain's Notes: ${manifest.captainsNotes}`);
+          }
+        } else {
+          addAccessLog(
+            `User ${userLoggedIn.name} attempted to access manifest records for ${user.name}.`
+          );
+          printOutput(`No manifest records available for ${user.name}.`);
+        }
+      }
+    }
+  };
+
+  const medicalRecord = (userId) => {
+    if (!checkGrant("medical-record:read")) {
+      addAccessLog(`Unauthorised access to medical records denied.`);
+      printUnauthorised();
+    } else {
+      const user = findUser(userId);
+
+      if (user !== null) {
+        const medical = user.medical;
+
+        if (medical !== undefined) {
+          printOutput(`Medical records for ${user.name}`);
+          addAccessLog(
+            `User ${userLoggedIn.name} accessed medical records for ${user.name}.`
+          );
+          if (medical.bloodType !== undefined) {
+            printOutput(`Blood type: ${medical.bloodType}`);
+          }
+          if (medical.geneticRiskMarkers !== undefined) {
+            printOutput(`Genetic risk markers: ${medical.geneticRiskMarkers}`);
+          }
+          if (medical.bodyScanResults !== undefined) {
+            printOutput(`Body scan results: ${medical.bodyScanResults}`);
+          }
+          if (medical.medicalOfficersNotes !== undefined) {
+            printOutput(
+              `Medical officer's notes: ${medical.medicalOfficersNotes}`
+            );
+          }
+        } else {
+          addAccessLog(
+            `User ${userLoggedIn.name} attempted to access medical records for ${user.name}.`
+          );
           printOutput(`No medical records available for ${user.name}.`);
         }
       }
     }
-  }
+  };
+
+  const simulation = (simulationId) => {
+    if (!checkGrant("simulation:read")) {
+      addAccessLog(`Unauthorised access to **REDACTED** denied.`);
+      printUnauthorised();
+    } else {
+      const simulation = findSimulation(simulationId);
+
+      if (simulation !== null) {
+        printOutput(`Log details for simulation number ${simulation.number}`);
+        printOutput(`${simulation.log}`);
+      } else {
+        addAccessLog(
+          `User ${userLoggedIn.name} attempted to access logs for simulation ${simulationId}.`
+        );
+        printOutput(
+          `No simulation records available for ${simulationId}. How did you get here? Please Ḋ̵̛͍̻̙̖̜̻̱͂̾͜O̴̘̘͙͖̪̹̟͉̠̝̓̿̑͌͒̃̀̉̂̑͌̕N̵̲̜͕̙͖͒̌̿̾̾̌͛̓͛͆͆̚̕̚͝'̷̧̨̢̪̠̫̠̗̫̬̫̭̣̣͇̓̾͗̊T̴̮̖͍̪̪͉̝̽̽ advise S.U.R.L.I.E.`
+        );
+      }
+    }
+  };
 
   const onInput = (input) => {
     printInput(input);
 
     const tokens = input.trim().split(" ");
     const command = tokens[0]?.toLocaleLowerCase();
-    const parameter = tokens[1]?.toLocaleUpperCase();;
+    const parameter = tokens[1]?.toLocaleUpperCase();
 
     if (command === "login") {
       login(parameter);
@@ -236,10 +312,14 @@ const TerminalController = () => {
     } else if (command === "medical-record") {
       medicalRecord(parameter);
     } else if (command === "captains-log") {
-      captainsLog(parameter);      
+      captainsLog(parameter);
+    } else if (command === "simulation") {
+      simulation(parameter);
     } else if (command === "") {
     } else {
-      printOutput(`Command '${command}' is invalid. Please refer to the Starship Icarus Emergency Terminal Manual for guidance.`)
+      printOutput(
+        `Command '${command}' is invalid. Please refer to the Starship Icarus Emergency Terminal Manual for guidance.`
+      );
     }
 
     updateUi();

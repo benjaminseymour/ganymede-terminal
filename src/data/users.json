@@ -20,6 +20,11 @@
     "grants": ["ship-manifest:read"]
   },
   {
+    "name": "Anon",
+    "id": "ABCD1234",
+    "grants": ["simulation:read"]
+  },
+  {
     "name": "Aeryn Patel",
     "id": "UE901B379",
     "medical": {
