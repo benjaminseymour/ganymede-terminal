@@ -1,5 +1,5 @@
-import './App.css';
-import TerminalController from './TerminalController';
+import "./App.css";
+import TerminalController from "./TerminalController";
 
 function App() {
   return (
