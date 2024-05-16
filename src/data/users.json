@@ -185,7 +185,7 @@
     "medical": {
       "bloodType": "B Positive",
       "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes. DNA abnomality KIAA0196, ZNF707.",
-      "medicalOfficersNotes": "Genetic modification detected."
+      "medicalOfficersNotes": "Genetic modification detected. DNA is consistent with subject UE778I545. Opportunity to obtain another test subject is too good to resist."
     },
     "manifest": {
       "embarked": "Mars Colony",
@@ -340,9 +340,8 @@
     "id": "UE778I545",
     "medical": {
       "bloodType": "A Negative",
-      "geneticRiskMarkers": "HNF1A, HNF1B and HNF4A indicative of increased diabetes risk. MTPAP and MYBPHL positive.",
-      "bodyScanResults": "Fracture calluses on occipital, R parietal, R temporal, L & R maxillae, hyoid, vomer.",
-      "medicalOfficersNotes": "Signs of recent significant trauma unrelated to the testing. Subject will need to be monitored to see if this will have any impact on further experimentation."
+      "geneticRiskMarkers": "DNA scan consistent with foetal genetic manipulation of high risk genes. DNA abnomality KIAA0196, ZNF707.",
+      "medicalOfficersNotes": "Genetic modification detected. No signs of trauma despite repeated testing. Next test trauma level to be raised. How much can they survive?."
     },
     "manifest": {
       "embarked": "UEC",
