@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  height: 100vh;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'VT323', monospace;
+}
+
+.logContainer {
+  margin-top: 2rem;
+  overflow-y: auto;
+}
+
+.logEntry {
+  border: 1px solid #00ff00;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timestamp {
+  color: #008800;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.userId {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.action {
+  color: #00cc00;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  font-family: monospace;
+}

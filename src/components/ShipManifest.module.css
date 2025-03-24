@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  height: 100vh;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'VT323', monospace;
+}
+
+.searchSection {
+  margin-bottom: 2rem;
+}
+
+.searchForm {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.input {
+  background-color: #000;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 0.5rem;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+}
+
+.button {
+  background-color: #000;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+}
+
+.button:hover {
+  background-color: #00ff00;
+  color: #000;
+}
+
+.error {
+  color: #ff0000;
+  margin-top: 1rem;
+}
+
+.record {
+  border: 1px solid #00ff00;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.manifestData {
+  margin-top: 1rem;
+}
+
+.dataSection {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #00ff00;
+}
+
+.dataSection h4 {
+  color: #008800;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
