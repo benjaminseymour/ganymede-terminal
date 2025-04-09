@@ -63,6 +63,13 @@ function Dashboard() {
           ACTIVITY LOG
           {!hasPermission('access-log:read') && <FaLock className={styles.lockIcon} />}
         </Link>
+        <Link
+          to={hasPermission('ship-manifest:read') ? '/user-list' : '#'}
+          className={`${styles.option} ${!hasPermission('ship-manifest:read') ? styles.disabled : ''}`}
+        >
+          PASSENGER LIST
+          {!hasPermission('ship-manifest:read') && <FaLock className={styles.lockIcon} />}
+        </Link>
       </div>
     </div>
   );

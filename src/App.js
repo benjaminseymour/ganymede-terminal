@@ -9,6 +9,7 @@ import ShipManifest from './components/ShipManifest';
 import ActivityLog from './components/ActivityLog';
 import AiLog from './components/AiLog';
 import { ActivityLogProvider } from './context/ActivityLogContext';
+import UserList from './components/UserList';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/ship-manifest" element={<ShipManifest />} />
             <Route path="/activity-log" element={<ActivityLog />} />
             <Route path="/ai-log" element={<AiLog />} />
+            <Route path="/user-list" element={<UserList />} />
           </Routes>
         </BrowserRouter>
       </ActivityLogProvider>
