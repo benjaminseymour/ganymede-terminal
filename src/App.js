@@ -7,6 +7,7 @@ import CaptainsLog from './components/CaptainsLog';
 import MedicalRecords from './components/MedicalRecords';
 import ShipManifest from './components/ShipManifest';
 import ActivityLog from './components/ActivityLog';
+import AiLog from './components/AiLog';
 import { ActivityLogProvider } from './context/ActivityLogContext';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/medical-records" element={<MedicalRecords />} />
             <Route path="/ship-manifest" element={<ShipManifest />} />
             <Route path="/activity-log" element={<ActivityLog />} />
+            <Route path="/ai-log" element={<AiLog />} />
           </Routes>
         </BrowserRouter>
       </ActivityLogProvider>

@@ -26,6 +26,15 @@ function Dashboard() {
         <p>ID: {user?.id}</p>
       </div>
       <div className={styles.optionsContainer}>
+        { 
+          hasPermission('ai-log:read') ?        
+          <Link
+          to='/ai-log'
+          className={styles.option}
+        >
+          S.I.R.L.I.E.'S PRIVATE LOG
+        </Link> : <></>
+      }
         <Link
           to={hasPermission('captains-log:read') ? '/captains-log' : '#'}
           className={`${styles.option} ${!hasPermission('captains-log:read') ? styles.disabled : ''}`}

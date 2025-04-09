@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+  }
+  
+ .sidebar {
+    width: 300px;
+    border-right: 2px solid #00ff00;
+    padding: 1rem;
+  }
+
+  .photo {
+    max-height: 80%;
+    width: auto;
+    margin-top: 1rem;
+  }
+  
