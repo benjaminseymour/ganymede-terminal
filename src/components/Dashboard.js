@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
-import { FaLock } from 'react-icons/fa';
+import { FaLock, FaRobot } from 'react-icons/fa';
 import styles from './Dashboard.module.css';
 import Navigation from './Navigation';
 import Header from './Header';
 
 function Dashboard() {
   const { user } = useUser();
+  const navigate = useNavigate();
   
   if (!user) {
     return <Navigate to="/" />;
@@ -71,6 +72,14 @@ function Dashboard() {
           {!hasPermission('ship-manifest:read') && <FaLock className={styles.lockIcon} />}
         </Link>
       </div>
+      {hasPermission('medical-record:read') && (
+        <div 
+          className={styles.naniteIcon}
+          onClick={() => navigate('/nanite-confirm')}
+        >
+          <FaRobot />
+        </div>
+      )}
     </div>
   );
 }

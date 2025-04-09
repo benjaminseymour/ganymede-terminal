@@ -10,6 +10,8 @@ import ActivityLog from './components/ActivityLog';
 import AiLog from './components/AiLog';
 import { ActivityLogProvider } from './context/ActivityLogContext';
 import UserList from './components/UserList';
+import NaniteConfirm from './components/NaniteConfirm';
+import NaniteInstructions from './components/NaniteInstructions';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
             <Route path="/activity-log" element={<ActivityLog />} />
             <Route path="/ai-log" element={<AiLog />} />
             <Route path="/user-list" element={<UserList />} />
+            <Route path="/nanite-confirm" element={<NaniteConfirm />} />
+            <Route path="/nanite-instructions" element={<NaniteInstructions />} />
           </Routes>
         </BrowserRouter>
       </ActivityLogProvider>

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  height: 100vh;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'VT323', monospace;
+}
+
+.content {
+  margin-top: 4rem;
+}
+
+.instructions {
+  margin-top: 2rem;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}

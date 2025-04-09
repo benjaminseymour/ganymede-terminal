@@ -48,3 +48,18 @@
   margin-left: 0.5rem;
   font-size: 1rem;
 }
+
+.naniteIcon {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00ff00;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.naniteIcon:hover {
+  opacity: 1;
+}

@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'VT323', monospace;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.button {
+  background-color: #000;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+}
+
+.button:hover {
+  background-color: #00ff00;
+  color: #000;
+}
