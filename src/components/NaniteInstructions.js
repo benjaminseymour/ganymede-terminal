@@ -20,10 +20,10 @@ function NaniteInstructions() {
           Temporary nanite deactivation sequence:
         </p>
         <p>
-          1. Prepare the synthetic heart by assembling it form six pieces
+          1. Prepare the synthetic heart by assembling it from six pieces
         </p>
         <p>
-          2. Empower the heart with 5 crytals of Illuminite per attempt
+          2. Empower the heart with 10 crystals of Illuminite per attempt
         </p>
         <p>
           3. A skilled hacker must then disable the nanites personally (challange the infected person to paper-scissors-rock)
